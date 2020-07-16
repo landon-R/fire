@@ -1,9 +1,9 @@
 require("dotenv").config();
-const express = require("express");
+const app = require('./app');
 const connectDB = require("./db/mongodb"); //CONFIGURACION DE DB MONGO
 const { appConfig, dbConfig } = require("./config"); //ficehro config
 
-const app = express();
+
 
 async function iniApp(appConfig, dbConfig) {
   try {
