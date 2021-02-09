@@ -8,7 +8,7 @@ function ListProducts() {
 
 useEffect(() => {
    const obtenerAPI = async () => {
-       const res = await fetch('http://localhost:8080/products')
+       const res = await fetch('http://localhost:4000/products')
        const datos = await res.json()
        setProductos(datos.products)
        console.log(datos.products);
