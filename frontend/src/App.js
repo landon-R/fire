@@ -1,19 +1,16 @@
 import React from "react";
-import Header from "./components/Header";
+import LayoutBase from "./components/layouts/LayoutBase";
 import ListProducts from "./components/ListProducts";
 
 function App() {
   
 
   return (
-    <div className="container">
-     <div >
-     <Header />
+    <LayoutBase>
         <div className="row" >
         <ListProducts/>
         </div>
-     </div>
-    </div>
+    </LayoutBase>
   );
 }
 
