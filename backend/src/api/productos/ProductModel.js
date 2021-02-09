@@ -18,7 +18,7 @@ const ProductSchema = Schema(
 
 //metodo para poner la url en campo imgUrl  para usarlo en el frontend
 ProductSchema.methods.setImgUrl = function setImgUrl(filename){
-  this.imgUrl = `http://localhost:4000/public/${filename}`
+  this.imgUrl = `http://localhost:4000/uploads/${filename}`
 }
 
 module.exports = model('Products', ProductSchema)

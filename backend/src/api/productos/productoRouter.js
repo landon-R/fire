@@ -1,5 +1,5 @@
 const express = require("express");
-const upload = require('../../middlewares/storage')
+const upload = require('../../middlewares/multer')
 
 const {addProduct, getProducts } = require('./productController')
 

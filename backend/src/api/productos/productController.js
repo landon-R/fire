@@ -1,6 +1,7 @@
 const Product = require("./ProductModel");
 
-async function addProduct(req, res) {
+//__* CREAR UN PRODUCTO
+exports.addProduct = async (req, res) => {
   try {
     const { name, size, unitaryPrice, description } = req.body;
 
@@ -11,6 +12,7 @@ async function addProduct(req, res) {
       description,
     });
 
+    //si hay img agregale la url para pintar la img en el frontend
     if (req.file) {
       const { filename } = req.file;
       product.setImgUrl(filename);
@@ -22,14 +24,13 @@ async function addProduct(req, res) {
   } catch (e) {
     res.status(500).send({ message: e.message });
   }
-}
-
-async function getProducts(req, res){
- const products = await Product.find().lean().exec()
- res.status(200).send({products})
-}
-
-module.exports = {
-  addProduct,
-  getProducts
 };
+
+
+
+//__* OBTENER TODOS LOS PRODUCTOS
+exports.getProducts = async (req, res) => {
+  const products = await Product.find().lean().exec();
+  res.status(200).send({ products });
+};
+
