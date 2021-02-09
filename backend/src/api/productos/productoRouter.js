@@ -1,6 +1,7 @@
 const express = require("express");
-const upload = require('../libs/storage')
-const {addProduct, getProducts } = require('../controllers/productController')
+const upload = require('../../middlewares/storage')
+
+const {addProduct, getProducts } = require('./productController')
 
 const api = express.Router();
 

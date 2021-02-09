@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const productRoutes = require("./routes/product");
+const productRoutes = require("./api/productos/productoRouter");
 
 require('./config')
 require("dotenv").config();
