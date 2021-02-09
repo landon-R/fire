@@ -18,4 +18,4 @@ app.listen(port, () => console.log(`listen on ${port}`));
 
 // registro de rutas
 app.use("/public", express.static(`${__dirname}/storage/imgs`));
-app.use("/v1", productRoutes);
+app.use("/", productRoutes);
