@@ -8,6 +8,8 @@ function App() {
     AuthContext
   );
 
+  console.log(user);
+  console.log(isAuthenticated);
   return (
     <LayoutBase>
       <div className="row">
