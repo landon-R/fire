@@ -18,7 +18,7 @@ export default function AuthProvider({ children }) {
   
     return (
       <div>
-        {isLoaded ? (
+        {!isLoaded ? (
           <h1>Loading</h1>
         ) : (
           <AuthContext.Provider
