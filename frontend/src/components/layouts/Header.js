@@ -25,29 +25,29 @@ export default function Header() {
           <ul className="ml-4">
             {!isAuthenticated ? (
               // NO AUTHENTICATED
-              <div className="flex items-center space-x-2">
-                <Link to="/">
-                  <a className="hover:text-blue-500">Home</a>
+              <li className="flex items-center space-x-2">
+                <Link className="hover:text-blue-500" to="/">
+                  Home
                 </Link>
-                <Link to="/login">
-                  <a className="hover:text-blue-500">Login</a>
+                <Link className="hover:text-blue-500" to="/login">
+                  Login
                 </Link>
-                <Link to="/register">
-                  <a className="hover:text-blue-500">Register</a>
+                <Link className="hover:text-blue-500" to="/register">
+                  Register
                 </Link>
-              </div>
+              </li>
             ) : (
               // SI AUTHENTICATED
-              <div>
-                <Link to="/">
-                  <a className="hover:text-blue-500">Home</a>
+              <li>
+                <Link className="hover:text-blue-500" to="/">
+                  Home
                 </Link>
-                <Link to="/todos">
-                  <a className="hover:text-blue-500">Todos</a>
+                <Link className="hover:text-blue-500" to="/todos">
+                  odos
                 </Link>
                 {user.role === "admin" && (
-                  <Link to="/admin">
-                    <a className="hover:text-blue-500">Admin</a>
+                  <Link className="hover:text-blue-500" to="/admin">
+                    dmin
                   </Link>
                 )}
                 <button
@@ -57,7 +57,7 @@ export default function Header() {
                 >
                   Logout
                 </button>
-              </div>
+              </li>
             )}
           </ul>
         </div>

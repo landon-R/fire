@@ -1,6 +1,7 @@
 @tailwind base;
 
 a,
+input,
 button {
     @apply focus:outline-none
 }
