@@ -20,7 +20,7 @@ const userSchema = new Schema(
       enum: ["user", "admin"],
       required: true,
     },
-    todos: [{ type: Schema.Types.ObjectId, ref: "todo" }],
+    todos: [{ type: Schema.Types.ObjectId, ref: "Todo" }],
   },
   {
     timestamps: true,
