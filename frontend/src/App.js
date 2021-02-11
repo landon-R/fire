@@ -13,7 +13,6 @@ function App() {
   return (
     <LayoutBase>
       <div className="row">
-        <h4>ffd</h4>
         <ListProducts />
       </div>
     </LayoutBase>
