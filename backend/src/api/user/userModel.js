@@ -28,7 +28,7 @@ const userSchema = new Schema(
 );
 
 //encripta el password
-UserSchema.pre('save',function(next){
+userSchema.pre('save',function(next){
     if(!this.isModified('password'))
         return next();
     bcrypt.hash(this.password,10,(err,passwordHash)=>{
@@ -41,7 +41,7 @@ UserSchema.pre('save',function(next){
 
 
 //decifra el password
-UserSchema.methods.comparePassword = function(password,cb){
+userSchema.methods.comparePassword = function(password,cb){
     bcrypt.compare(password,this.password,(err,isMatch)=>{
         if(err)
             return cb(err);

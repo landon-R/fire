@@ -2,7 +2,17 @@ const bcrypt = require("bcrypt");
 const passport = require("passport");
 const JwtStrategy = require('passport-jwt').Strategy;
 const LocalStrategy = require("passport-local").Strategy;
-const userModel = require("../api/user/userModel");
+const userModel = require("./userModel");
+
+
+
+const cookieExtractor = req =>{
+    let token = null;
+    if(req && req.cookies){
+        token = req.cookies["access_token"];
+    }
+    return token;
+}
 
 
 

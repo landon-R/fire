@@ -33,3 +33,4 @@ app.use(express.static(path.join(__dirname, 'public' )))
 
 //ROUTERS DE ENDPOINTS
 app.use("/", require("./api/productos/productoRouter"))
+app.use("/user", require("./api/user/userRouter"))
