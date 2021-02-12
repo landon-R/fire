@@ -18,7 +18,7 @@ const Login = (props) => {
     e.preventDefault();
     AuthService.login(user).then((data) => {
       console.log(data);
-      const { isAuthenticated, user, message } = data;
+      const { isAuthenticated, user } = data;
       if (isAuthenticated) {
         authContext.setUser(user);
         authContext.setIsAuthenticated(isAuthenticated);

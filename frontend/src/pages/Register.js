@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import AuthService from "../api/AuthService";
-import Message from "../components/Message";
+// import Message from "../components/Message";
+import { viewAlertRol } from "../tools/viewAlert";
 
 const Register = (props) => {
   const [user, setUser] = useState({ username: "", password: "", role: "" });
-  const [message, setMessage] = useState(null);
+//   const [message, setMessage] = useState(null);
   let timerID = useRef(null);
 
   useEffect(() => {
@@ -25,7 +26,10 @@ const Register = (props) => {
     e.preventDefault();
     AuthService.register(user).then((data) => {
       const { message } = data;
-      setMessage(message);
+      message.msgError
+        ? viewAlertRol(message.msgBody, "error")
+        : viewAlertRol(message.msgBody, "success");
+    //   setMessage(message);
       resetForm();
       if (!message.msgError) {
         timerID = setTimeout(() => {
@@ -84,7 +88,7 @@ const Register = (props) => {
           </button>
         </div>
       </form>
-      {message ? <Message message={message} /> : null}
+      {/* {message ? <Message message={message} /> : null} */}
     </div>
   );
 };
