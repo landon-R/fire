@@ -38,12 +38,12 @@ export default function Header() {
               </li>
             ) : (
               // SI AUTHENTICATED
-              <li>
+              <li className="flex items-center space-x-2">
                 <Link className="hover:text-blue-500" to="/">
                   Home
                 </Link>
                 <Link className="hover:text-blue-500" to="/todos">
-                  odos
+                  Todos
                 </Link>
                 {user.role === "admin" && (
                   <Link className="hover:text-blue-500" to="/admin">
@@ -52,7 +52,7 @@ export default function Header() {
                 )}
                 <button
                   type="button"
-                  className="text-red-300"
+                  className="text-red-400 hover:text-red-500"
                   onClick={onClickLogoutHandler}
                 >
                   Logout
