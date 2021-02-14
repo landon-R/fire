@@ -45,7 +45,7 @@ const Todos = (props) => {
   };
 
   return (
-    <div>
+    <div className='w-7/12 mx-auto' >
       <form className="bg-green-400 p-4 rounded-xl" onSubmit={onSubmit}>
         <div className="relative my-4">
           <label className="absolute bottom-9 left-1" htmlFor="todo">

@@ -47,7 +47,7 @@ export default function Header() {
                 </Link>
                 {user.role === "admin" && (
                   <Link className="hover:text-blue-500" to="/admin">
-                    dmin
+                   Admin
                   </Link>
                 )}
                 <button

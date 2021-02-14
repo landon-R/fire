@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Todos from "./pages/Todos";
+import Admin from "./pages/Admin";
+import PrivateRoute from "./routers/PrivateRoute";
 
 function App() {
   const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(
@@ -18,14 +20,17 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-        <div className="container mx-auto px-4">
-          <Switch>
-            <Route exact={true} path="/register" component={Register} />
-            <Route exact={true} path="/login" component={Login} />
-            <Route exact={true} path="/" component={Home} />
-            <Route exact={true} path="/todos" component={Todos} />
-          </Switch>
-        </div>
+        {/* <div className="container mx-auto px-4"> */}
+         
+            <Route exact path="/" component={Home} />
+            <Route  path="/admin" component={Admin} />
+            <Route  path="/register" component={Register} />
+            <Route  path="/login" component={Login} />
+            <PrivateRoute path="/todos" roles={["user","admin"]} component={Todos}/>
+            <PrivateRoute path="/admin" roles={["admin"]} component={Admin}/>
+            {/* <Route exact={true}  path="/todos" component={Todos} /> */}
+          
+        {/* </div> */}
       </BrowserRouter>
     </div>
   );
