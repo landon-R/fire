@@ -9,34 +9,25 @@ export default function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // useEffect(() => {
-  //   AuthService.isAuthenticated().then((data) => {
-  //     setUser(data.user);
-  //     setIsAuthenticated(data.isAuthenticated);
-  //     setIsLoaded(true);
-  //   });
-  // }, []);
-
   useEffect(() => {
-    const obtenerApp = async () => {
-      const data = await AuthService.isAuthenticated();
-      console.log(data);
+    AuthService.isAuthenticated().then((data) => {
       setUser(data.user);
       setIsAuthenticated(data.isAuthenticated);
       setIsLoaded(true);
-    };
-    obtenerApp();
+    });
   }, []);
 
   // useEffect(() => {
-  //   (async () => {
+  //   const obtenerApp = async () => {
   //     const data = await AuthService.isAuthenticated();
-  //     console.log(data);
   //     setUser(data.user);
   //     setIsAuthenticated(data.isAuthenticated);
   //     setIsLoaded(true);
-  //   })();
+  //   };
+  //   obtenerApp();
   // }, []);
+
+
 
   return (
     <div>

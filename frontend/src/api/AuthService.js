@@ -1,3 +1,4 @@
+
 export default {
   login: (user) => {
     console.log(user);
@@ -26,14 +27,13 @@ export default {
       .then((data) => data);
   },
 
-
   logout: () => {
     return fetch("/user/logout")
       .then((res) => res.json())
-      .then((data) => data);
+      .then((data) => data );
+      
   },
 
-  
   isAuthenticated: () => {
     return fetch("/user/authenticated").then((res) => {
       if (res.status !== 401) return res.json().then((data) => data);
@@ -41,3 +41,4 @@ export default {
     });
   },
 };
+

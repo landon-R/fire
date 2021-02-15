@@ -17,6 +17,8 @@ export default function Header() {
     });
   };
 
+
+
   return (
     <nav className="bg-blueGray-900 text-white">
       <div className="flex items-center mx-8 h-16 justify-between">

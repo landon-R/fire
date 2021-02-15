@@ -47,21 +47,21 @@ export const viewAlertRol = (message, icono) => {
 };
 
 
-const viewAlertDelete = (message, icono) => {
-  Swal.fire({
-    title: "Esta seguro?",
-    text: message,
-    icon: icono,
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Yes, delete it!",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire("Deleted!", "Your file has been deleted.", "success");
-    }
-  });
-};
+// const viewAlertDelete = (message, icono) => {
+//   Swal.fire({
+//     title: "Esta seguro?",
+//     text: message,
+//     icon: icono,
+//     showCancelButton: true,
+//     confirmButtonColor: "#3085d6",
+//     cancelButtonColor: "#d33",
+//     confirmButtonText: "Yes, delete it!",
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//       Swal.fire("Deleted!", "Your file has been deleted.", "success");
+//     }
+//   });
+// };
 
 
 
@@ -71,27 +71,27 @@ const viewAlertDelete = (message, icono) => {
 
 // _______________________________________
 
-export const viewAlertImage = (message, icono) => {
-  return Swal.fire({
-    title: "Sweet!",
-    text: "Modal with a custom image.",
-    imageUrl: "https://unsplash.it/400/200",
-    imageWidth: 400,
-    imageHeight: 200,
-    imageAlt: "Custom image",
-  });
-};
+// export const viewAlertImage = (message, icono) => {
+//   return Swal.fire({
+//     title: "Sweet!",
+//     text: "Modal with a custom image.",
+//     imageUrl: "https://unsplash.it/400/200",
+//     imageWidth: 400,
+//     imageHeight: 200,
+//     imageAlt: "Custom image",
+//   });
+// };
 
 
 
-export const viewAlerCenter = (message, icono) => {
-  return Swal.fire({
-    position: "top-end",
-    icon: "success",
-    title: "Your work has been saved",
-    showConfirmButton: false,
-    animation: "slide-from-top",
-    timer: 1500,
-  });
-};
+// export const viewAlerCenter = (message, icono) => {
+//   return Swal.fire({
+//     position: "top-end",
+//     icon: "success",
+//     title: "Your work has been saved",
+//     showConfirmButton: false,
+//     animation: "slide-from-top",
+//     timer: 1500,
+//   });
+// };
 
